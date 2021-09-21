@@ -1,7 +1,6 @@
 [
   {
-    "currentPattern": 12,
-    "currentPart": 1,
+    "setPattern": 12,
   "fx": {
       "0": {"SEND": 50, "WAVE": 127, "TUNE": 10, "DECAY":  127, "BODY":  127},
       "1": {"SEND": 20, "WAVE": 0, "TUNE": 11, "DECAY":  114, "BODY":  127},
@@ -9,15 +8,15 @@
       "3": {"SEND": 20, "WAVE": 127, "TUNE": 13, "DECAY":  88, "BODY":  60}
     },
   "key": {
-      "DISC_ONLY": ["PIT"],
-      "DISC_GREEN": ["AMT"],
-      "DISC_RED": ["RATE"],
-      "DISC_BLUE":["REL"],
-      "FADER_ONLY": ["PAN"],
-      "FADER_SQUARE": ["LEV"],
-      "FADER_CROSS": ["REL"],
-      "FADER_CIRCLE": ["TUNE"]
-    },
+      "DISC_ONLY": {"part":1,"cmd":"LEV2","min":0,"max":127},
+      "DISC_GREEN": {"part":6,"cmd":"AMT1","min":50,"max":105},
+      "DISC_RED": {"part":6,"cmd":"REL1","min":50,"max":105},
+      "DISC_BLUE":{"part":6,"cmd":"PIT1","min":50,"max":105},
+      "FADER_ONLY": {"part":6,"cmd":"TUNE","min":50,"max":105},
+      "FADER_SQUARE":{"part":6,"cmd":"BIT","min":50,"max":105},
+      "FADER_CROSS": {"part":6,"cmd":"FLD","min":50,"max":105},
+      "FADER_CIRCLE": {"part":6,"cmd":"ATT1","min":50,"max":105}
+  },
     "part": {
       "1": [
         [176,14,0],
