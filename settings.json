@@ -8,7 +8,7 @@
       "3": {"SEND": 20, "WAVE": 127, "TUNE": 13, "DECAY":  88, "BODY":  60}
     },
   "key": {
-      "DISC_ONLY": {"part":1,"cmd":"LEV2","min":0,"max":127},
+      "DISC_ONLY": {"part":1,"cmd":"LEV2","min":80,"max":90},
       "DISC_GREEN": {"part":6,"cmd":"AMT1","min":50,"max":105},
       "DISC_RED": {"part":6,"cmd":"REL1","min":50,"max":105},
       "DISC_BLUE":{"part":6,"cmd":"PIT1","min":50,"max":105},
