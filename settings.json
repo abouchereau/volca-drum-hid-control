@@ -1,21 +1,22 @@
 [
   {
     "setPattern": 12,
+   "comment": "MIDI values are from 0 to 127",
   "fx": {
-      "0": {"SEND": 50, "WAVE": 127, "TUNE": 10, "DECAY":  127, "BODY":  127},
-      "1": {"SEND": 20, "WAVE": 0, "TUNE": 11, "DECAY":  114, "BODY":  127},
-      "2": {"SEND": 20, "WAVE": 127, "TUNE": 18, "DECAY":  23, "BODY":  0},
-      "3": {"SEND": 20, "WAVE": 127, "TUNE": 13, "DECAY":  88, "BODY":  60}
+      "0": {"part":6, "SEND": 50, "WAVE": 127, "TUNE": 10, "DECAY":  127, "BODY":  127},
+      "1": {"part":6, "SEND": 20, "WAVE": 0, "TUNE": 11, "DECAY":  114, "BODY":  127},
+      "2": {"part":6, "SEND": 20, "WAVE": 127, "TUNE": 18, "DECAY":  23, "BODY":  0},
+      "3": {"part":6, "SEND": 20, "WAVE": 127, "TUNE": 13, "DECAY":  88, "BODY":  60}
     },
   "key": {
-      "DISC_ONLY": {"part":1,"cmd":"LEV2","min":80,"max":90},
-      "DISC_GREEN": {"part":6,"cmd":"AMT1","min":50,"max":105},
-      "DISC_RED": {"part":6,"cmd":"REL1","min":50,"max":105},
-      "DISC_BLUE":{"part":6,"cmd":"PIT1","min":50,"max":105},
+      "DISC_ONLY": {"part":6,"cmd":"AMT1","min":90,"max":127},
+      "DISC_GREEN": {"part":6,"cmd":"RATE1","min":0,"max":127},
+      "DISC_RED": {"part":6,"cmd":"AMT2","min":80,"max":126},
+      "DISC_BLUE":{"part":6,"cmd":"RATE2","min":0,"max":127},
       "FADER_ONLY": {"part":6,"cmd":"TUNE","min":50,"max":105},
-      "FADER_SQUARE":{"part":6,"cmd":"BIT","min":50,"max":105},
-      "FADER_CROSS": {"part":6,"cmd":"FLD","min":50,"max":105},
-      "FADER_CIRCLE": {"part":6,"cmd":"ATT1","min":50,"max":105}
+      "FADER_SQUARE":{"part":6,"cmd":"REL1","min":45,"max":80},
+      "FADER_CROSS": {"part":6,"cmd":"REL2","min":50,"max":75},
+      "FADER_CIRCLE": {"part":6,"cmd":"BIT","min":120,"max":127}
   },
     "part": {
       "1": [
@@ -107,14 +108,14 @@
         [177,52,52]
       ],
       "5": [
-        [181,14,41],
+        [181,14,6],
         [181,15,50],
-        [181,17,70],
+        [181,17,94],
         [181,18,88],
         [181,29,79],
         [181,30,76],
         [181,46,41],
-        [181,47,50],
+        [181,47,92],
         [181,53,0],
         [181,10,64],
         [181,26,0],
