@@ -3,20 +3,32 @@
     "setPattern": 12,
    "comment": "MIDI values are from 0 to 127",
   "fx": {
-      "0": {"part":6, "SEND": 50, "WAVE": 127, "TUNE": 10, "DECAY":  127, "BODY":  127},
-      "1": {"part":6, "SEND": 20, "WAVE": 0, "TUNE": 11, "DECAY":  114, "BODY":  127},
-      "2": {"part":6, "SEND": 20, "WAVE": 127, "TUNE": 18, "DECAY":  23, "BODY":  0},
-      "3": {"part":6, "SEND": 20, "WAVE": 127, "TUNE": 13, "DECAY":  88, "BODY":  60}
+      "0": {"SEND": 50, "WAVE": 127, "TUNE": 10, "DECAY":  127, "BODY":  127},
+      "1": {"SEND": 20, "WAVE": 0, "TUNE": 11, "DECAY":  114, "BODY":  127},
+      "2": {"SEND": 20, "WAVE": 127, "TUNE": 18, "DECAY":  23, "BODY":  0},
+      "3": {"SEND": 20, "WAVE": 127, "TUNE": 13, "DECAY":  88, "BODY":  60}
     },
-  "key": {
-      "DISC_ONLY": {"part":6,"cmd":"AMT1","min":90,"max":127},
-      "DISC_GREEN": {"part":6,"cmd":"RATE1","min":0,"max":127},
-      "DISC_RED": {"part":6,"cmd":"AMT2","min":80,"max":126},
-      "DISC_BLUE":{"part":6,"cmd":"RATE2","min":0,"max":127},
-      "FADER_ONLY": {"part":6,"cmd":"TUNE","min":50,"max":105},
-      "FADER_SQUARE":{"part":6,"cmd":"REL1","min":45,"max":80},
-      "FADER_CROSS": {"part":6,"cmd":"REL2","min":50,"max":75},
-      "FADER_CIRCLE": {"part":6,"cmd":"BIT","min":120,"max":127}
+  "control": {
+    "5": {
+      "DISC_ONLY": {"cmd":"AMT1","min":90,"max":127},
+      "DISC_GREEN": {"cmd":"RATE1","min":0,"max":127},
+      "DISC_RED": {"cmd":"AMT2","min":80,"max":126},
+      "DISC_BLUE":{"cmd":"RATE2","min":0,"max":127},
+      "FADER_ONLY": {"cmd":"TUNE","min":50,"max":105},
+      "FADER_SQUARE":{"cmd":"REL1","min":45,"max":80},
+      "FADER_CROSS": {"cmd":"REL2","min":50,"max":75},
+      "FADER_CIRCLE": {"cmd":"BIT","min":120,"max":127}
+    },
+    "6": {
+      "DISC_ONLY": {"cmd":"AMT1","min":90,"max":127},
+      "DISC_GREEN": {"cmd":"RATE1","min":0,"max":127},
+      "DISC_RED": {"cmd":"AMT2","min":80,"max":126},
+      "DISC_BLUE":{"cmd":"RATE2","min":0,"max":127},
+      "FADER_ONLY": {"cmd":"TUNE","min":50,"max":105},
+      "FADER_SQUARE":{"cmd":"REL1","min":45,"max":80},
+      "FADER_CROSS": {"cmd":"REL2","min":50,"max":75},
+      "FADER_CIRCLE": {"cmd":"BIT","min":120,"max":127}
+      }
   },
     "part": {
       "1": [
