@@ -10,7 +10,7 @@
     },
   "control": {
     "5": {
-      "DISC_ONLY": {"cmd":"AMT1","min":90,"max":127},
+      "DISC_ONLY": {"cmd":"AMT1","min":70,"max":127},
       "DISC_GREEN": {"cmd":"RATE1","min":0,"max":127},
       "DISC_RED": {"cmd":"AMT2","min":80,"max":126},
       "DISC_BLUE":{"cmd":"RATE2","min":0,"max":127},
