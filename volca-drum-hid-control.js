@@ -21,14 +21,13 @@ rl.question("=> Choose MIDI Output (default: "+midiNode.DEFAULT_MIDI_INDEX+") : 
     if (paramMidiIndex == null || paramMidiIndex == "" || parseInt(paramMidiIndex) > (midiNode.nbMidiDevices - 1)) {
         rl.question("=> Bad index for MIDI Output", a=>process.exit());
     }
-    console.log(parseInt(paramMidiIndex));
     midiNode.midiOutIndex = parseInt(paramMidiIndex);
     midiNode.openOutput();
-
+    volca.logger.clear();
+    volca.onSettingChange();
     let deviceDJHero = new DeviceDJHeroPS(volca);
     let deviceArcadeJoystick = new DeviceArcadeJoystick(volca);
     deviceDJHero.init();
     deviceArcadeJoystick.init();
-    rl.question("=> Go ? ", a => volca.onSettingChange());
 });
 
