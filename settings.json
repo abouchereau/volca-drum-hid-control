@@ -10,10 +10,10 @@
     },
   "control": {
     "5": {
-      "DISC_ONLY": {"cmd":"AMT1","min":70,"max":127},
-      "DISC_GREEN": {"cmd":"RATE1","min":0,"max":127},
+      "DISC_ONLY": {"cmd":"AMT1","min":80,"max":127},
+      "DISC_GREEN": {"cmd":"REL1","min":59,"max":90},
       "DISC_RED": {"cmd":"AMT2","min":80,"max":126},
-      "DISC_BLUE":{"cmd":"RATE2","min":0,"max":127},
+      "DISC_BLUE":{"cmd":"REL2","min":0,"max":127},
       "FADER_ONLY": {"cmd":"TUNE","min":50,"max":105},
       "FADER_SQUARE":{"cmd":"REL1","min":45,"max":80},
       "FADER_CROSS": {"cmd":"REL2","min":50,"max":75},
