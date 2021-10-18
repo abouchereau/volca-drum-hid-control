@@ -30,7 +30,7 @@
       "FADER_CIRCLE": {"cmd":"BIT","min":120,"max":127}
     },
     "6": {
-      "DISC_ONLY": {"cmd":"PIT1","min":90,"max":127},
+      "DISC_ONLY": {"cmd":"PIT1","min":25,"max":127},
       "DISC_GREEN": {"cmd":"RATE1","min":0,"max":127},
       "DISC_RED": {"cmd":"REL1","min":50,"max":80},
       "DISC_BLUE":{"cmd":"AMT1","min":0,"max":127},
