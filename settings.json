@@ -1,43 +1,44 @@
 [
   {
     "setPattern": 12,
-   "comment": "MIDI values are from 0 to 127",
-  "fx": {
+    "setMuteParts": [1,2,3,4,5,6],
+    "comment": "MIDI values are from 0 to 127",
+    "fx": {
       "0": {"SEND": 50, "WAVE": 127, "TUNE": 10, "DECAY":  127, "BODY":  127},
       "1": {"SEND": 20, "WAVE": 0, "TUNE": 11, "DECAY":  114, "BODY":  127},
       "2": {"SEND": 20, "WAVE": 127, "TUNE": 18, "DECAY":  23, "BODY":  0},
       "3": {"SEND": 20, "WAVE": 127, "TUNE": 13, "DECAY":  88, "BODY":  60}
     },
-  "control": {
-    "3": {
-      "DISC_ONLY": {"cmd":"REL1","min":25,"max":60},
-      "DISC_GREEN": {"cmd":"PIT1","min":0,"max":127},
-      "DISC_RED": {"cmd":"REL2","min":56,"max":80},
-      "DISC_BLUE":{"cmd":"PIT2","min":0,"max":127},
-      "FADER_ONLY": {"cmd":"SEND","min":0,"max":50},
-      "FADER_SQUARE":{"cmd":"TUNE","min":0,"max":50},
-      "FADER_CROSS": {"cmd":"REL2","min":50,"max":75},
-      "FADER_CIRCLE": {"cmd":"BIT","min":120,"max":127}
-    },
-    "5": {
-      "DISC_ONLY": {"cmd":"PIT1","min":0,"max":127},
-      "DISC_GREEN": {"cmd":"AMT1","min":80,"max":127},
-      "DISC_RED": {"cmd":"REL2","min":56,"max":80},
-      "DISC_BLUE":{"cmd":"PIT2","min":0,"max":127},
-      "FADER_ONLY": {"cmd":"SEND","min":0,"max":50},
-      "FADER_SQUARE":{"cmd":"TUNE","min":0,"max":50},
-      "FADER_CROSS": {"cmd":"REL2","min":50,"max":75},
-      "FADER_CIRCLE": {"cmd":"BIT","min":120,"max":127}
-    },
-    "6": {
-      "DISC_ONLY": {"cmd":"PIT1","min":25,"max":127},
-      "DISC_GREEN": {"cmd":"RATE1","min":0,"max":127},
-      "DISC_RED": {"cmd":"REL1","min":50,"max":80},
-      "DISC_BLUE":{"cmd":"AMT1","min":0,"max":127},
-      "FADER_ONLY": {"cmd":"SEND","min":0,"max":50},
-      "FADER_SQUARE":{"cmd":"TUNE","min":0,"max":50},
-      "FADER_CROSS": {"cmd":"REL2","min":50,"max":75},
-      "FADER_CIRCLE": {"cmd":"BIT","min":120,"max":127}
+    "control": {
+      "3": {
+        "DISC_ONLY": {"cmd":"REL1","min":25,"max":60},
+        "DISC_GREEN": {"cmd":"PIT1","min":0,"max":127},
+        "DISC_RED": {"cmd":"REL2","min":56,"max":80},
+        "DISC_BLUE":{"cmd":"PIT2","min":0,"max":127},
+        "FADER_ONLY": {"cmd":"SEND","min":0,"max":50},
+        "FADER_SQUARE":{"cmd":"TUNE","min":0,"max":50},
+        "FADER_CROSS": {"cmd":"REL2","min":50,"max":75},
+        "FADER_CIRCLE": {"cmd":"BIT","min":120,"max":127}
+      },
+      "5": {
+        "DISC_ONLY": {"cmd":"PIT1","min":0,"max":127},
+        "DISC_GREEN": {"cmd":"AMT1","min":80,"max":127},
+        "DISC_RED": {"cmd":"REL2","min":56,"max":80},
+        "DISC_BLUE":{"cmd":"PIT2","min":0,"max":127},
+        "FADER_ONLY": {"cmd":"SEND","min":0,"max":50},
+        "FADER_SQUARE":{"cmd":"TUNE","min":0,"max":50},
+        "FADER_CROSS": {"cmd":"REL2","min":50,"max":75},
+        "FADER_CIRCLE": {"cmd":"BIT","min":120,"max":127}
+      },
+      "6": {
+        "DISC_ONLY": {"cmd":"PIT1","min":25,"max":127},
+        "DISC_GREEN": {"cmd":"RATE1","min":0,"max":127},
+        "DISC_RED": {"cmd":"REL1","min":50,"max":80},
+        "DISC_BLUE":{"cmd":"AMT1","min":0,"max":127},
+        "FADER_ONLY": {"cmd":"SEND","min":0,"max":50},
+        "FADER_SQUARE":{"cmd":"TUNE","min":0,"max":50},
+        "FADER_CROSS": {"cmd":"REL2","min":50,"max":75},
+        "FADER_CIRCLE": {"cmd":"BIT","min":120,"max":127}
       }
   },
     "part": {

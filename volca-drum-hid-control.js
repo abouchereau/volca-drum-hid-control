@@ -14,7 +14,7 @@ const rl = readline.createInterface({
 
 let midiNode = new MidiNode();
 midiNode.scanOutput();
-let volca = new VolcaDrum(midiNode);
+let volca = new VolcaDrum(midiNode, process.argv.slice(2));
 
 rl.question("=> Choose MIDI Output (default: "+midiNode.DEFAULT_MIDI_INDEX+") : ", paramMidiIndex => {
     midiNode.midiOutIndex = midiNode.DEFAULT_MIDI_INDEX;
