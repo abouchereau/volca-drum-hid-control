@@ -9,10 +9,10 @@ const DeviceArcadeJoystick = require("./lib/DeviceArcadeJoystick");
 const yargs = require('yargs');
 
 const argv = yargs
-    .option("midiOutputIndex", {
+    .option("midiOutputName", {
         alias: "o",
-        describe: "The index of the Midi Output",
-        type: 'number',
+        describe: "A name part of the Midi Output",
+        type: 'string',
     })
     .option("logToFile", {
         alias: "lf",
@@ -37,8 +37,8 @@ let midiNode = new MidiNode();
 midiNode.scanOutput();
 let volca = new VolcaDrum(midiNode, argv.logToFile, argv.logToScreen);
 
-if(typeof argv.midiOutputIndex == "number") {
-    start(argv.midiOutputIndex);
+if(typeof argv.midiOutputName == "string") {
+    start(argv.midiOutputName);
 }
 else {
     rl.question("=> Choose MIDI Output (default: " + midiNode.DEFAULT_MIDI_INDEX + ") : ", paramMidiIndex => {
@@ -51,9 +51,10 @@ else {
     });
 }
 
-function start(midiOutIndex) {
-    midiNode.midiOutIndex = midiOutIndex;
-    midiNode.openOutput();
+function start(midiOutName) {
+    midiNode.openFromName(midiOutName);
+    //midiNode.midiOutIndex = midiOutIndex;
+    //midiNode.openOutput();
     volca.logger.clear();
     volca.onSettingChange();
     let deviceDJHero = new DeviceDJHeroPS(volca, argv.logToScreen);
