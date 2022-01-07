@@ -6,12 +6,18 @@ const MidiNode = require("./lib/MidiNode");
 const VolcaDrum = require("./lib/VolcaDrum");
 const DeviceDJHeroPS = require("./lib/DeviceDJHeroPS");
 const DeviceArcadeJoystick = require("./lib/DeviceArcadeJoystick");
+const MidiInput = require("./lib/MidiInput");
 const yargs = require('yargs');
 
 const argv = yargs
     .option("midiOutputName", {
         alias: "o",
         describe: "A name part of the Midi Output",
+        type: 'string',
+    })
+    .option("midiInputName", {
+        alias: "i",
+        describe: "A name part of the Midi Input",
         type: 'string',
     })
     .option("logToFile", {
@@ -61,4 +67,8 @@ function start(midiOutName) {
     let deviceArcadeJoystick = new DeviceArcadeJoystick(volca, argv.logToScreen);
     deviceDJHero.init();
     deviceArcadeJoystick.init();
+    if(typeof argv.midiInputName == "string") {
+        let midiInput = new MidiInput(volca);
+        midiInput.openFromNamePart(argv.midiInputName);
+    }
 }
