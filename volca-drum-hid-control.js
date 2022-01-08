@@ -7,6 +7,7 @@ const VolcaDrum = require("./lib/VolcaDrum");
 const DeviceDJHeroPS = require("./lib/DeviceDJHeroPS");
 const DeviceArcadeJoystick = require("./lib/DeviceArcadeJoystick");
 const MidiInput = require("./lib/MidiInput");
+const MidiPlayer = require("./lib/MidiPlayer");
 const yargs = require('yargs');
 
 const argv = yargs
@@ -43,7 +44,7 @@ let midiNode = new MidiNode();
 midiNode.scanOutput();
 let volca = new VolcaDrum(midiNode, argv.logToFile, argv.logToScreen);
 
-if(typeof argv.midiOutputName == "string") {
+if (typeof argv.midiOutputName == "string") {
     start(argv.midiOutputName);
 }
 else {
@@ -67,8 +68,9 @@ function start(midiOutName) {
     let deviceArcadeJoystick = new DeviceArcadeJoystick(volca, argv.logToScreen);
     deviceDJHero.init();
     deviceArcadeJoystick.init();
-    if(typeof argv.midiInputName == "string") {
+    if (typeof argv.midiInputName == "string") {
         let midiInput = new MidiInput(volca);
         midiInput.openFromNamePart(argv.midiInputName);
     }
+    let midiPlayer = new MidiPlayer(volca);
 }
