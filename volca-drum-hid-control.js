@@ -16,11 +16,6 @@ const argv = yargs
         describe: "A name part of the Midi Output",
         type: 'string',
     })
-    .option("midiInputName", {
-        alias: "i",
-        describe: "A name part of the Midi Input",
-        type: 'string',
-    })
     .option("logToFile", {
         alias: "lf",
         describe: "Log to file",
@@ -68,9 +63,11 @@ function start(midiOutName) {
     let deviceArcadeJoystick = new DeviceArcadeJoystick(volca, argv.logToScreen);
     deviceDJHero.init();
     deviceArcadeJoystick.init();
-    if (typeof argv.midiInputName == "string") {
+    //let midiPlayer = new MidiPlayer(volca);
+    let tryNextMidiDevice = true;
+    while(tryNextMidiDevice) {
         let midiInput = new MidiInput(volca);
-        midiInput.openFromNamePart(argv.midiInputName);
+        tryNextMidiDevice = midiInput.openNextDevice();
     }
-    let midiPlayer = new MidiPlayer(volca);
+   //
 }
