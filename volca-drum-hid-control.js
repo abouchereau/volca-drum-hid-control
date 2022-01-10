@@ -63,7 +63,7 @@ function start(midiOutName) {
     let deviceArcadeJoystick = new DeviceArcadeJoystick(volca, argv.logToScreen);
     deviceDJHero.init();
     deviceArcadeJoystick.init();
-    //let midiPlayer = new MidiPlayer(volca);
+    let midiPlayer = new MidiPlayer(volca);
     let tryNextMidiDevice = true;
     while(tryNextMidiDevice) {
         let midiInput = new MidiInput(volca);
