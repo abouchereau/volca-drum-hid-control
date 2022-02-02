@@ -43,6 +43,7 @@ if (typeof argv.midiOutputName == "string") {
     start(argv.midiOutputName);
 }
 else {
+
     rl.question("=> Choose MIDI Output (default: " + midiNode.DEFAULT_MIDI_INDEX + ") : ", paramMidiIndex => {
         let midiOutIndex = midiNode.DEFAULT_MIDI_INDEX;
         if (paramMidiIndex == null || paramMidiIndex == "" || parseInt(paramMidiIndex) > (midiNode.nbMidiDevices - 1)) {
